@@ -10,7 +10,7 @@ import (
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusGone)
-	log.Printf("Referer: %s\n", r.Header.Get("Referer"))
+	log.Printf("RequestURL: %s Referer: %s\n", r.URL, r.Header.Get("Referer"))
 }
 
 func HealthHeckHandler(w http.ResponseWriter, r *http.Request) {
